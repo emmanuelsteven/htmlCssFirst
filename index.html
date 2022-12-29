@@ -25,14 +25,30 @@
 
     -->
     <script  src="js/index.js"></script>
-    <h1 id="title">Customer Feedback Form</h1>
-    <p id="description">Rating customers satisfation over our products</p>
-  
-    <form id="survey-form">
-      <input id= "name"type="text" required>
-      <input id="email" type="email" name="email" 
-      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+    <h1 id="title">Survey Form</h1>
+  <p id="description">Please fill out the form below to provide your feedback.</p>
+  <form id="survey-form">
+    <label id="name-label" for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+    <label id="email-label" for="email">Email:</label><br>
+    <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Enter your email"><br><br>
+    <label id="number-label" for="number">Number:</label><br>
+    <input type="number" id="number" name="number" min="1" max="100" placeholder="Enter a number between 1 and 100"><br><br>
+    <label for="dropdown">Dropdown:</label><br>
+    <select id="dropdown">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+    </select><br><br>
+    <label for="radio">Radio:</label><br>
+    <input type="radio" id="radio1" name="radio" value="radio1">Option 1<br>
+    <input type="radio" id="radio2" name="radio" value="radio2">Option 2<br><br>
+    <label for="checkboxes">Checkboxes:</label><br>
+    <input type="checkbox" id="checkbox1" name="checkboxes" value="checkbox1">Option 1<br>
+    <input type="checkbox" id="checkbox2" name="checkboxes" value="checkbox2">Option 2<br>
+    <input type="checkbox" id="checkbox3" name="checkboxes" value="checkbox3">Option 3<br><br>
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" placeholder="Enter any additional comments here"></textarea><br><br>
+    <button id="submit" type="submit">Submit</button>
     </form>
-
   </body>
 </html>
